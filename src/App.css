@@ -9,24 +9,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background:linear-gradient(rgb(63, 63, 148),rgb(146, 63, 63),rgb(142, 57, 71));
 }
 .timer-container{
-  height: 30vh;
+  height: 50vh;
   width: 30vw;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  /* flex-direction: column; */
+  flex-direction: column;
   background-color: maroon;
   border-radius: 40px;
 }
-h1{
-  font-size: 5rem;
-}
+
 button{
   height: 10vh;
   width: 10vw;
   border-radius: 20px;
   cursor: pointer;
+  font-size: large;
+  /* display: flex; */
+  /* gap: 20px; */
+}
+.btn{
+  display: flex;
+  gap: 20px;
+}
+/* //time design */
+.time{
+  font-size: 5rem;
+  font-weight: 999;
+  /* display: flex;
+  flex-direction: row;
+  gap: 10px; */
+  margin: 10px;
 }
