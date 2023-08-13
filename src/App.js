@@ -3,10 +3,12 @@ import './App.css';
 
 function App() {
   const [time,setTime]=useState({ms:0,sec:0,min:0,hrs:0});
+  const [inter,setInter]=useState();
+  const [status,setStatus]=useState(0);
 
   function update(){
     run();
-    setInterval(run,10);  
+    setInter(setInterval(run,10));  
   };
   function stop(){
   // setTime({ms:0,sec:0,min:0,hrs:0});
@@ -42,9 +44,14 @@ function App() {
         <span className="time">{(time.ms>=10)?(time.ms):"0"+(time.ms)}</span>
         
         </div>
+
+
         <div className="btn">
-        <button onClick={update}>START</button>
-        <button onClick={stop}>CLEAR</button>
+          
+          <button onClick={update}>START</button>
+          <button onClick={stop}>CLEAR</button>
+
+
         </div>
       </div>
     </div>
